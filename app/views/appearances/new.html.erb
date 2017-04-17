@@ -1,0 +1,14 @@
+<h1>Create a new appearance</h1>
+
+<%= form_tag create_appearance_path do %>
+<%= label_tag :guest_name %>
+<%= text_field_tag :guest_name %>
+<%= label_tag :episode_number %>
+<%= number_field_tag :episode_number %>
+<%= label_tag :rating %>
+<%= number_field_tag :rating %>
+
+<%= submit_tag "Create Appearance" %>
+<% end %>
+
+<%= link_to "Back to home", home_path %>

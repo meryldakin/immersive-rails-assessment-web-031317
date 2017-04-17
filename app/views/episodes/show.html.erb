@@ -1,0 +1,15 @@
+<h1>Episode Details</h1>
+<h3>Episode Number: <%= @episode.number %></h3>
+<h3>Air Date: <%= @episode.date %></h3>
+
+<h2>Guest Appearances:</h2>
+
+<% @episode.guests.each do |guest| %>
+  <li>
+    <% appearance = @episode.appearances.find_by(guest_id: guest.id) %>
+    Name: <%= guest.name %> || Appearance Rating: <%= appearance.rating %>
+
+
+  </li>
+<% end %>
+<%= link_to "Back to home", home_path %>
